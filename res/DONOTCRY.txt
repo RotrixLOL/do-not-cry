@@ -1,0 +1,36 @@
+                                                                                                                                       
+HHHHHHHHH     HHHHHHHHH               AAA                  CCCCCCCCCCCCCKKKKKKKKK    KKKKKKKEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD        
+H:::::::H     H:::::::H              A:::A              CCC::::::::::::CK:::::::K    K:::::KE::::::::::::::::::::ED::::::::::::DDD     
+H:::::::H     H:::::::H             A:::::A           CC:::::::::::::::CK:::::::K    K:::::KE::::::::::::::::::::ED:::::::::::::::DD   
+HH::::::H     H::::::HH            A:::::::A         C:::::CCCCCCCC::::CK:::::::K   K::::::KEE::::::EEEEEEEEE::::EDDD:::::DDDDD:::::D  
+  H:::::H     H:::::H             A:::::::::A       C:::::C       CCCCCCKK::::::K  K:::::KKK  E:::::E       EEEEEE  D:::::D    D:::::D 
+  H:::::H     H:::::H            A:::::A:::::A     C:::::C                K:::::K K:::::K     E:::::E               D:::::D     D:::::D
+  H::::::HHHHH::::::H           A:::::A A:::::A    C:::::C                K::::::K:::::K      E::::::EEEEEEEEEE     D:::::D     D:::::D
+  H:::::::::::::::::H          A:::::A   A:::::A   C:::::C                K:::::::::::K       E:::::::::::::::E     D:::::D     D:::::D
+  H:::::::::::::::::H         A:::::A     A:::::A  C:::::C                K:::::::::::K       E:::::::::::::::E     D:::::D     D:::::D
+  H::::::HHHHH::::::H        A:::::AAAAAAAAA:::::A C:::::C                K::::::K:::::K      E::::::EEEEEEEEEE     D:::::D     D:::::D
+  H:::::H     H:::::H       A:::::::::::::::::::::AC:::::C                K:::::K K:::::K     E:::::E               D:::::D     D:::::D
+  H:::::H     H:::::H      A:::::AAAAAAAAAAAAA:::::AC:::::C       CCCCCCKK::::::K  K:::::KKK  E:::::E       EEEEEE  D:::::D    D:::::D 
+HH::::::H     H::::::HH   A:::::A             A:::::AC:::::CCCCCCCC::::CK:::::::K   K::::::KEE::::::EEEEEEEE:::::EDDD:::::DDDDD:::::D  
+H:::::::H     H:::::::H  A:::::A               A:::::ACC:::::::::::::::CK:::::::K    K:::::KE::::::::::::::::::::ED:::::::::::::::DD   
+H:::::::H     H:::::::H A:::::A                 A:::::A CCC::::::::::::CK:::::::K    K:::::KE::::::::::::::::::::ED::::::::::::DDD     
+HHHHHHHHH     HHHHHHHHHAAAAAAA                   AAAAAAA   CCCCCCCCCCCCCKKKKKKKKK    KKKKKKKEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD        
+                                                                                                                                       
+
+ _______    ______         __    __   ______   ________         ______   _______   __      __ 
+/       \  /      \       /  \  /  | /      \ /        |       /      \ /       \ /  \    /  |
+$$$$$$$  |/$$$$$$  |      $$  \ $$ |/$$$$$$  |$$$$$$$$/       /$$$$$$  |$$$$$$$  |$$  \  /$$/ 
+$$ |  $$ |$$ |  $$ |      $$$  \$$ |$$ |  $$ |   $$ |         $$ |  $$/ $$ |__$$ | $$  \/$$/  
+$$ |  $$ |$$ |  $$ |      $$$$  $$ |$$ |  $$ |   $$ |         $$ |      $$    $$<   $$  $$/   
+$$ |  $$ |$$ |  $$ |      $$ $$ $$ |$$ |  $$ |   $$ |         $$ |   __ $$$$$$$  |   $$$$/    
+$$ |__$$ |$$ \__$$ |      $$ |$$$$ |$$ \__$$ |   $$ |         $$ \__/  |$$ |  $$ |    $$ |    
+$$    $$/ $$    $$/       $$ | $$$ |$$    $$/    $$ |         $$    $$/ $$ |  $$ |    $$ |    
+$$$$$$$/   $$$$$$/        $$/   $$/  $$$$$$/     $$/           $$$$$$/  $$/   $$/     $$/     
+                                                                                              
+
+
+
+
+Congratulations! You have been hacked :)
+
+To recover your files send 0.05 BTC to hacker@hacker.com.
