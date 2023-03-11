@@ -110,11 +110,11 @@ jobs:
                 ;;
         esac
 
-        cp target/${{ matrix.target }}/release/encrypt-me $stage/
+        cp target/${{ matrix.target }}/release/donotcry $stage/
         cd $stage
 
         RELEASE_VERSION=${GITHUB_REF#refs/tags/}
-        ASSET_NAME="encrypt-me-$RELEASE_VERSION-${{ matrix.target }}.tar.gz"
+        ASSET_NAME="donotcry-$RELEASE_VERSION-${{ matrix.target }}.tar.gz"
         ASSET_PATH="$src/$ASSET_NAME"
         CHECKSUM_PATH="$ASSET_PATH.sha256"
 
