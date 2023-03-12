@@ -14,7 +14,7 @@ fn main() {
         .subcommand(
             Command::new("decrypt")
                 .about("Decrypt a target: file or directory")
-                .arg(arg!(<target> "Target directory or file to encrypt")),
+                .arg(arg!(<target> "Target directory or file to decrypt")),
         )
         .get_matches();
 
